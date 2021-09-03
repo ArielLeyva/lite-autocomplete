@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- SEO 	-->
+        <title>Restaurante ¡A lo cubano!</title>
+        <meta charset="utf-8">
+        <!-- Bootstrap 	-->
+        <link href="src/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="src/libs/bootstrap/bootstrap.bundle.min.js"></script>
+        <!-- Easy-autocomplete -->
+        <link rel="stylesheet" href="dist/css/themes/light-bg/ligth-bg-theme.css">
+        <script src="dist/js/easy-autocomplete.min.js"></script>
+        <!-- Controlador de la página -->
+        <script src="src/js/source.js"></script>
+        <script src="src/js/main.js"></script>
+        <!-- Tema de la página -->
+        <link href="src/css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">EA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Documentación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Github</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="downloadDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Descargar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="downloadDropdown">
+                                <li><a class="dropdown-item" href="#">Easy-autocomplete.min.js</a></li>
+                                <li><a class="dropdown-item" href="#">Easy-autocomplete.min.css</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Ver todos los temas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="p-2">
+            <h1 class="title">Easy autocomplete</h1>
+            <p><code>Easy-autocomplete</code> es una ligera librería ligera para personalizar las opciones de autocompletado en los campos de entrada de texto y facilitar el trabajo de los desarrolladores web en este aspecto.</p>
+            <p>En el mundo del desarrollo existen diversas librerías muy buenas para personalizar y trabajar con el autocompletado, cada una de ellas con sus puntos fuertes. Aquí te resumimos cuales son los puntos fuertes de <code>Easy-autocomplete</code>:</p>
+        </div>
+        <div class="mt-3 p-2">
+            <h6>Aquí tienes un ejemplo funcionando</h6>
+            <input id="input" class="form-control" type="text" autocomplete="off">
+            <div class="position-relative w-100">
+                <ul tag="ejemplo" id="parent" class="autocomplete w-100"></ul>
+            </div>
+        </div>
+        <div class="p-2 mt-3">
+            <h5 class="sub-title">Ajustar opciones</h5>
+            <form id="optionsForm" class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h6 class="form-description">Modo de búsqueda de coincidencias.</h6>
+                        <div class="form-floating mb-2 form-body">
+                            <select class="form-select" id="mode" aria-label="Modo de búsqueda">
+                                <option value="strict">Estricto</option>
+                                <option value="flex">Flexible</option>
+                            </select>
+                            <label for="mode">Modo de búsqueda</label>
+                            <small id="modeDescription" class="text-muted"></small>
+                        </div>
+                        <h6 class="form-description">Mínimo número de caracteres para mostrar coincidencias.</h6>
+                        <div class="form-floating mb-2 form-body">
+                            <input type="number" class="form-control" id="minLength" placeholder="1">
+                            <label for="minLength">Tamaño mínimo</label>
+                            <small id="minLengthDescription" class="text-muted"></small>
+                        </div>
+                        <h6 class="form-description">Máximo número de coincidencias en pantalla.</h6>
+                        <div class="form-floating mb-2 form-body" style="border-bottom: 0">
+                            <input type="number" class="form-control" id="max" placeholder="30">
+                            <label for="max">Número de coincidencias</label>
+                            <small id="maxDescription" class="text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6 class="form-description">Tiempo de demora en milisegundos para mostrar coincidencias.</h6>
+                        <div class="form-floating mb-2 form-body">
+                            <input type="number" class="form-control" id="delay" placeholder="200">
+                            <label for="delay">Tiempo de espera</label>
+                            <small id="delayDescription" class="text-muted"></small>
+                        </div>
+                        <h6 class="form-description">Mostrar los resultados con mayor número de coincidencias al inicio.</h6>
+                        <div class="form-check mb-2 form-body">
+                            <input class="form-check-input" type="checkbox" value="" id="relevance" checked>
+                            <label class="form-check-label" for="relevance">
+                                Ordenar por relevancia
+                            </label>
+                        </div>
+                        <h6 class="form-description">Búsqueda sensible a mayúsculas y minúsculas.</h6>
+                        <div class="form-check mb-2 form-body">
+                            <input class="form-check-input" type="checkbox" value="" id="caseSensitive">
+                            <label class="form-check-label w-100" for="caseSensitive">
+                                Case sensitive
+                            </label>
+                            <small id="caseSensitiveDescription" class="text-muted"></small>
+                        </div>
+                        <h6 class="form-description">Mostrar coincidencias antes de comenzar a escribir.</h6>
+                        <div class="form-check mb-2 form-body" style="border-bottom: 0">
+                            <input class="form-check-input" type="checkbox" value="" id="autoFocus">
+                            <label class="form-check-label w-100" for="autoFocus">
+                                Foco automático
+                            </label>
+                            <small id="autoFocusDescription" class="text-muted"></small>
+                        </div>
+                        <div class="float-end">
+                            <button type="reset" class="btn btn-secondary btn-sm">Restablecer</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,1 +1,44 @@
-
+.autocomplete {
+    position: absolute;
+    top: 0;
+    border: .1rem solid rgb(114, 114, 114);
+    border-radius: .2rem;
+    list-style: none;
+    padding: 0;
+    visibility: hidden;
+    max-width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+.autocomplete > li {
+    padding: .2rem;
+    cursor: pointer;
+    border-bottom: .1rem solid rgb(204, 204, 204);
+}
+.autocomplete :last-child {
+    border-bottom: 0;
+}
+.autocomplete-active-primary {
+    background-color: #0d6efd;
+    color: white;
+}
+.autocomplete-active-success {
+    background-color: #198754;
+    color: white;
+}
+.autocomplete-active-danger {
+    background-color: #cc3b49;
+    color: white;
+}
+.autocomplete-active-dark {
+    background-color: #3c3839;
+    color: white;
+}
+.autocomplete-active-info {
+    background-color: #0d90aa;
+    color: white;
+}
+.autocomplete-active-warning {
+    background-color: #ffc107;
+    color: black;
+}

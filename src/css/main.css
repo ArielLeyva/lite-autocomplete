@@ -1,0 +1,13 @@
+.form-description {
+    color: #0d6efd;
+    margin-bottom: .25rem;
+}
+.form-body {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.5rem;
+}
+.sub-title {
+    font-weight: bold;
+    color: green;
+    margin-bottom: .25rem;
+}
